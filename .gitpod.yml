@@ -1,0 +1,9 @@
+tasks:
+  # - name: start
+- before: |
+    pyenv virtualenv venv
+    source activate venv
+  init:  |
+    echo "проверка init"
+        
+  command: python start.py
