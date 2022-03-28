@@ -1,5 +1,9 @@
 # pypack
 
+https://packaging.python.org/en/latest/tutorials/packaging-projects/#generating-archives
+----------------------------------------------------------------
+
+
 pyenv virtualenv venv
 source activate venv
 
@@ -14,3 +18,4 @@ python -m twine upload --repository testpypi dist/*
 
 ===================================================
 pip install -i https://test.pypi.org/simple/ newlib-vlakondra
+
