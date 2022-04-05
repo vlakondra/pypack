@@ -1,4 +1,9 @@
-from src.newlib import lib
+import os, sys
+# from src.newlib import lib
 
-lib.func2(33)
-lib.func3()
+# import src.newlib.lib
+
+# print_table()
+print(os.path)
+
+print_table()
