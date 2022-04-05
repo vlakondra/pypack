@@ -18,4 +18,5 @@ python -m twine upload --repository testpypi dist/*
 
 ===================================================
 pip install -i https://test.pypi.org/simple/ newlib-vlakondra
+pip install --index-url https://test.pypi.org/simple/ pretty-vlakondra
 
