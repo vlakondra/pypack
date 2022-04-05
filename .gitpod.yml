@@ -3,6 +3,13 @@ tasks:
 - before: |
     pyenv virtualenv venv
     source activate venv
+
+    pip install --upgrade pip
+    pip install --upgrade setuptools
+    pip install --upgrade build
+    pip install --upgrade twine
+
+
   init:  |
     echo "проверка init"
         
