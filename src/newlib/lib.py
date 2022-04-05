@@ -1,3 +1,6 @@
+'''
+Библиотечный модуль
+'''
 from prettytable import PrettyTable
 
 def func(n):
@@ -7,7 +10,10 @@ def func2(n):
     print('func2!!!')
     return(n**2) 
 
-def func3():
+def print_table():
+    '''
+     Распечатывает таблицу
+    '''
     x = PrettyTable()
     x.field_names = ["Имя", "Возраст", "Рост"]
     x.add_row(["Иван", 22, 178])
