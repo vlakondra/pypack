@@ -8,6 +8,7 @@ tasks:
     pip install --upgrade setuptools
     pip install --upgrade build
     pip install --upgrade twine
+    pip install prettytable
 
 
   init:  |
