@@ -25,3 +25,5 @@ def print_table():
     x.add_row(["Сидор", 20, 160])
     print(x)
        
+if __name__ == "__main__":
+    func(33)       
