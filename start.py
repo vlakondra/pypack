@@ -7,10 +7,14 @@ print (sys.path)
 
 from src.newlib import lib #OK
 from newlib import lib as lb #OK
+from newlib import CONST_PI
 
-lb.print_table()
 
-lib.print_table()
 
 print(lib.scircle(2))
 
+std =sys.stdout
+with open ('file.txt', 'w') as f:
+    sys.stdout = f
+    lb.print_table()
+    sys.stdout =std

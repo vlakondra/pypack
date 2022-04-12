@@ -3,12 +3,12 @@
 '''
 from prettytable import PrettyTable
 
-from src.newlib import CONST_PI #OK
+# from src.newlib import CONST_PI # NOT OK
 from newlib import CONST_PI as PI #OK
 
 
 def func(n):
-    print('func!!!', CONST_PI, PI)
+    print('func!!!',  PI)
     return(n**3)
 
 def scircle(r):

@@ -20,3 +20,13 @@ python -m twine upload --repository testpypi dist/*
 pip install -i https://test.pypi.org/simple/ newlib-vlakondra
 pip install --index-url https://test.pypi.org/simple/ pretty-vlakondra
 
+
+---
+
+https://askubuntu.com/questions/1268833/error-command-path-to-env-bin-python3-7-im-ensurepip-upgrade
+sudo apt-get install python3.9-venv
+
+it's help me!!
+
+---
+
