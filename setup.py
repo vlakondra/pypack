@@ -7,8 +7,8 @@ with open("README.md", "r", encoding="utf-8") as fh:
 #     requirements = fh.read()
 
 setup(
-    name='cliscript',
-    version='0.1.3',
+    name='cli-app-vlakondra',
+    version='0.2.8',
     author="Vlakondra",
     author_email="vkondra@gmail.com",
     description="Small cli app",
@@ -23,20 +23,27 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    packages = find_packages(),
-    # install_requires = [requirements],
     
     python_requires='>=3.6',
-    
-    
-    py_modules=['src.newlib.ttt'],
     install_requires=[
         'Click',
     ],
+    packages = find_packages(),
+    # install_requires = [requirements],
+    
+    py_modules=['cliapp.commands', 'cliapp.complex_commands'],
+    include_package_data=True,
+    package_dir={"": "src"}, 
+    package_data={
+        # If any package contains *.txt or *.rst files, include them:
+        "": ["*.txt", "*.rst"]
+    },
     entry_points={
         'console_scripts': [
-            'myscript = src.newlib.ttt:cli',
-            'second = src.newlib.ttt:cli2 '
+            'simple_1 = cliapp.commands:cli',
+            'simple_2 = cliapp.commands:cli2',
+            'readfile = cliapp.complex_commands:getfile' 
+            
         ],
     },
 )

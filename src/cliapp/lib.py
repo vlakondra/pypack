@@ -4,7 +4,7 @@
 from prettytable import PrettyTable
 
 # from src.newlib import CONST_PI # NOT OK
-from newlib import CONST_PI as PI #OK
+from cliapp import CONST_PI as PI #OK
 
 
 def func(n):

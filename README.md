@@ -14,12 +14,15 @@ python -m pip install --upgrade build
 python -m pip install --upgrade twine
 
 python -m build
-python -m twine upload --repository testpypi dist/*
+python -m twine upload --verbose --repository testpypi dist/*
 
 ===================================================
 pip install -i https://test.pypi.org/simple/ newlib-vlakondra
 pip install --index-url https://test.pypi.org/simple/ pretty-vlakondra
 
+---
+
+!pip install -i https://test.pypi.org/simple/ cli-app-vlakondra==0.2.8
 
 ---
 

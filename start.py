@@ -5,9 +5,9 @@ sys.path.insert(0, sr)
 
 print (sys.path)
 
-from src.newlib import lib #OK
-from newlib import lib as lb #OK
-from newlib import CONST_PI
+from src.cliapp import lib #OK
+from cliapp import lib as lb #OK
+from cliapp import CONST_PI
 
 
 
