@@ -1,1 +1,3 @@
-include src/cliapp/file.txt
+include src/cliapp/*.txt
+include *.txt
+include src/cliapp/txts/*.txt

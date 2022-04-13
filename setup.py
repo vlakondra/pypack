@@ -8,7 +8,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='cli-app-vlakondra',
-    version='0.2.8',
+    version='0.3.2',
     author="Vlakondra",
     author_email="vkondra@gmail.com",
     description="Small cli app",
@@ -34,10 +34,10 @@ setup(
     py_modules=['cliapp.commands', 'cliapp.complex_commands'],
     include_package_data=True,
     package_dir={"": "src"}, 
-    package_data={
-        # If any package contains *.txt or *.rst files, include them:
-        "": ["*.txt", "*.rst"]
-    },
+    # package_data={
+    #     # If any package contains *.txt or *.rst files, include them:
+    #     "cliapp": ["*.txt", "*.rst"]
+    # },
     entry_points={
         'console_scripts': [
             'simple_1 = cliapp.commands:cli',

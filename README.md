@@ -24,6 +24,8 @@ pip install --index-url https://test.pypi.org/simple/ pretty-vlakondra
 
 !pip install -i https://test.pypi.org/simple/ cli-app-vlakondra==0.2.8
 
+!!find / -type f -name file.txt
+
 ---
 
 https://askubuntu.com/questions/1268833/error-command-path-to-env-bin-python3-7-im-ensurepip-upgrade
