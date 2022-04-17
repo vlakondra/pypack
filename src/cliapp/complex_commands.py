@@ -3,12 +3,14 @@ import os
 import  importlib.resources as ir
 import cliapp
 
+
 @click.command()
 @click.option('--fname', prompt='Имя файла: ',  help='Укажите имя файла.')
 def getfile( fname):
     """Читаем указанный файл"""
     print('file',os.path.dirname(__file__))
-    print(os.getcwd(),__file__)
+    print('getcwd: ',os.getcwd(),__file__)
+    print(cliapp.CONST_PI)
     f= ir.open_text(package=cliapp, resource='file.txt', encoding="utf-8")
     res= f.read()
     print('res\n',res, sep='\n')

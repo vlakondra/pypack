@@ -1,3 +1,0 @@
-include src/cliapp/*
-include *.txt
-include src/cliapp/txts/*.txt

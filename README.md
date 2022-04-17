@@ -35,3 +35,10 @@ it's help me!!
 
 ---
 
+MANIFEST.in
+
+### include src/cliapp/*
+### include *.txt
+### include src/cliapp/txts/*.txt
+
+---

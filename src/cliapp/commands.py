@@ -4,7 +4,7 @@ import click
 @click.command()
 def cli():
     """Простой пример 1"""
-    click.echo('Hello World!')   
+    click.echo('Hello World!!!')   
     
 @click.command()
 def cli2():
