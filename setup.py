@@ -46,10 +46,9 @@ setup(
             'simple_2 = cliapp.commands:cli2',
             'readfile = cliapp.complex_commands:getfile',
             'check = cliapp.complex_commands:touch',
+            
             'showdata = cliapp.datacomm:showtable',
-             'showpart = cliapp.datacomm:grp'
-            
-            
+            'showpart = cliapp.datacomm:grp'
         ],
     },
 )

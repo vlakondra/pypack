@@ -1,7 +1,5 @@
-import csv
 import click
 import os
-
 from prettytable import PrettyTable
 from prettytable import from_csv
 import cliapp
@@ -28,25 +26,31 @@ def grp():
 @grp.command()
 @click.option('--start', default=1, help='начальная строка')
 @click.option('--end', default=2, help='конечная строка')
-def rows( start,end):
+def byrows( start,end):
     click.echo('фильтрация по строкам')
     nm =  os.path.join(os.path.dirname(__file__) ,'data','data.csv')
     
     with open(nm) as fd:
       pt = from_csv(fd)
-      click.echo(pt.get_string(start=start, end=end))
+      click.echo(pt.get_string(start = start, end = end))
+
 
 @grp.command()
-@click.option('--cols',  help="Укажите список полей через запятую")
-def cols(cols):
+@click.option("--cols", '-m', 
+              multiple=True, 
+              default=["ФИО"],
+              help="Укажите список полей, используя ключ -m. Например: showpart cols -m ФИО -m Оценка"
+              )
+def bycols(cols):
     click.echo('фильтрация по столбцам')
+    
     nm =  os.path.join(os.path.dirname(__file__) ,'data','data.csv')
     #!!! cliapp.datafile вместо nm
     with open(cliapp.datafile) as fd:
-      pt = from_csv(fd)
-      print('cols ',list(cols.split(' ')) )
-      print(pt.get_string(fields=list(cols.split(','))))
+      pt = from_csv(fd) 
+      print('cols ',cols,  )
+      print(pt.get_string(fields = cols))
 
 
-grp.add_command(rows)
-grp.add_command(cols)
+grp.add_command(byrows)
+grp.add_command(bycols)
