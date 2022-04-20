@@ -48,7 +48,7 @@ setup(
             'check = cliapp.complex_commands:touch',
             
             'showdata = cliapp.datacomm:showtable',
-            'showpart = cliapp.datacomm:grp'
+            'showtable = cliapp.datacomm:grp'
         ],
     },
 )
