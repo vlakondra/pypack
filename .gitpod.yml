@@ -1,4 +1,6 @@
-tasks:
+tasks:image: 
+  file:  .gitpod.Dockerfile
+
   # - name: start
 - before: |
     pyenv virtualenv venv

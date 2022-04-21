@@ -3,6 +3,11 @@
 https://packaging.python.org/en/latest/tutorials/packaging-projects/#generating-archives
 ----------------------------------------------------------------
 
+https://zetcode.com/python/click/
+
+https://www.assemblyai.com/blog/the-definitive-guide-to-python-click/
+
+------------------------------------------------------------------
 
 pyenv virtualenv venv
 source activate venv

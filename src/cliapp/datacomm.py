@@ -40,6 +40,7 @@ def showtable(filename):
 @click.pass_context
 def grp(ctx,fname):
     print("CTX", ctx.obj)
+
     ctx.obj = {'filename' :  os.path.join(os.getcwd(), 'data',fname)}
 
 
@@ -49,7 +50,7 @@ def table(obj):
     
     with open(obj['filename']) as fd:
       pt = from_csv(fd)
-      click.echo(pt)
+      click.secho(pt,fg="blue")
 
 
 @grp.command("выбрать строки")
