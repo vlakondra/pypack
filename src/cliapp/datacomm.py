@@ -69,7 +69,7 @@ def byrows(ctx, start,end):
 @click.option("--cols", '-c', 
               multiple=True, 
               default=["ФИО"],
-              help="Укажите список полей, используя ключ -m. Например:  -m ФИО -m Оценка"
+              help="Укажите список полей, используя ключ -c. Например:  -c ФИО -c Оценка"
               )
 @click.pass_obj
 def bycols(ctx,cols):
