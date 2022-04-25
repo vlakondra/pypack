@@ -1,6 +1,5 @@
 import click
 import os
-from pkg_resources import require
 from prettytable import PrettyTable
 from prettytable import from_csv
 import cliapp
@@ -24,22 +23,20 @@ def grp(ctx, filename):
     
     if ctx.invoked_subcommand is None:
         print()
-        click.echo("Укажите путь к файлу данных, ")
-        click.echo("a затем выберите одну из этих команд:")
+        click.echo("Укажите путь к файлу данных ")
+        click.echo("и выберите одну из этих команд:")
         print(*grp_commands, sep='\n')
         print()
    
     if filename:
-      print('fname??')
       ctx.obj = Data(filename)  
-
 
 @grp.command('show', help='Показать данные') 
 @click.option('--color', '-c', help="Укажите цвет")
-@click.pass_obj 
-def showdata(data, color):
-  if data.pathdata:
-    with open(data.pathdata) as fd:
+@click.pass_obj
+def showdata(obj, color):
+  if obj.pathdata:
+    with open(obj.pathdata) as fd:
       prt = from_csv(fd)
       click.secho(prt, fg=color)
 
