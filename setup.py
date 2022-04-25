@@ -33,7 +33,7 @@ setup(
     
     include_package_data=True,
  
-    py_modules=['cliapp.commands', 'cliapp.complex_commands', 'cliapp.datacomm'],
+    py_modules=['cliapp.commands', 'cliapp.datacomm'],
     package_dir={"": "src"}, 
  
     # package_data={
@@ -44,11 +44,8 @@ setup(
         'console_scripts': [
             'simple_1 = cliapp.commands:cli',
             'simple_2 = cliapp.commands:cli2',
-            'readfile = cliapp.complex_commands:getfile',
-            'check = cliapp.complex_commands:touch',
             
-            'showdata = cliapp.datacomm:showtable',
-            'showtable = cliapp.datacomm:grp'
+            'data = cliapp.datacomm:grp'
         ],
     },
 )
