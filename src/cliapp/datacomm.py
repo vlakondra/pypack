@@ -18,7 +18,8 @@ class Data(object):
               type=click.Path(exists=True),
               help="Путь к файлу данных")
 @click.pass_context
-def grp(ctx, filename):
+def grp(ctx: click.core.Context, filename):
+    
     grp_commands = ['show', 'info']
     
     if ctx.invoked_subcommand is None:
