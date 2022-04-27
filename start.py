@@ -1,7 +1,12 @@
 import os, sys
+from cliapp.datacomm import grp
 
-sr= os.path.join(os.getcwd() ,'src')
-sys.path.insert(0, sr)
+grp(filename='./data/data.csv')
 
-print (sys.path)
+grp.commands['show']()
+
+# sr= os.path.join(os.getcwd() ,'src')
+# sys.path.insert(0, sr)
+
+# print (sys.path)
 

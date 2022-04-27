@@ -6,11 +6,13 @@ import cliapp
 
 pt = PrettyTable()
 
+#https://stackoverflow.com/questions/46550523/passing-class-instance-through-context
 
 class Data(object):
     def __init__(self, path = None):
         self.pathdata = os.path.abspath(path) 
 
+# pass_repo = click.make_pass_decorator(Data)
 
 @click.group(invoke_without_command=True)
 @click.option('--filename','-f', 
@@ -18,7 +20,7 @@ class Data(object):
               type=click.Path(exists=True),
               help="Путь к файлу данных")
 @click.pass_context
-def grp(ctx: click.core.Context, filename):
+def grp(ctx, filename):
     
     grp_commands = ['show', 'info']
     
@@ -32,9 +34,14 @@ def grp(ctx: click.core.Context, filename):
     if filename:
       ctx.obj = Data(filename)  
 
+
+# print('repo', pass_repo, pass_repo.__str__())
+
+
 @grp.command('show', help='Показать данные') 
 @click.option('--color', '-c', help="Укажите цвет")
 @click.pass_obj
+# @click.make_pass_decorator(Data)
 def showdata(obj, color):
   if obj.pathdata:
     with open(obj.pathdata) as fd:
@@ -65,7 +72,9 @@ def showinfo(obj):
 #       pt = from_csv(fd)
 #       click.echo(pt.get_string(start = start, end = end))
 
+# print(grp.__dict__)
 
+# grp.add_command(showdata)
+# grp.add_command(showinfo)
 
-grp.add_command(showdata)
-grp.add_command(showinfo)
+# print(grp.__dict__)
